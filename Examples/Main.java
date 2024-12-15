@@ -22,6 +22,13 @@ public class Main {
         Function<Integer,Boolean> esMayorEdad = edad -> edad >= 18;
         System.out.println("Es mayor de edad: "+esMayorEdad.apply(12));
         System.out.println("---------------------------");
+        
+        /*EJEMPLO DE TIPO CONSUMER <T> */
+        System.out.println("\nEJEMPLO DE CONSUMER <T> ");
+        Consumer<String> imprimir = texto -> System.out.println(texto);
+        imprimir.accept("Hola Lambda");
+        System.out.println("---------------------------");
+        
 
     }
 
