@@ -35,10 +35,23 @@ public class Main {
         imprimir.accept("Numero Generado : " + aleatorio.get());
         System.out.println("---------------------------");
 
-        System.out.println("\nEJEMPLO DE BICONSUMER<T,U>");
         /* EJEMPLO DE TIPO BICONSUMER<T,U> */
-        BiConsumer<String, Integer> mostrar = (nombre, edad) -> System.out.println(nombre + " tiene " + edad + " años.");
+        System.out.println("\nEJEMPLO DE BICONSUMER<T,U>");
+        BiConsumer<String, Integer> mostrar = (nombre, edad) -> System.out
+                .println(nombre + " tiene " + edad + " años.");
         mostrar.accept("Dani", 12);
+        System.out.println("---------------------------");
+
+        /* EJEMPLO DE TIPO BIFUNCTION <T,U,R> */
+        System.out.println("\nEJEMPLO DE  BIFUNCTION <T,U,R>");
+        BiFunction<Integer, Integer, String> sumarYConvertir = (a, b) -> "Resultado: " + (a + b);
+        System.out.println(sumarYConvertir.apply(12, 6));
+        System.out.println("---------------------------");
+
+        /* EJEMPLO DE TIPO BIPREDICATE <T,U> */
+        System.out.println("\nEJEMPLO DE  BIPREDICATE <T,U>");
+        BiPredicate<Integer,Integer> mayorQue = (a,b) -> a > b;
+        System.out.println("3 > 4 : "+mayorQue.test(3, 4));
         System.out.println("---------------------------");
 
     }
